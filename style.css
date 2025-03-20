@@ -1,0 +1,74 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: 'Noto Sans', sans-serif;
+    background-color: #FEFBFC; /* Blanco */
+    color: #BF0F01; /* Rojo */
+}
+
+/* Barra de navegación */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 1495px;
+    height: 80px; /* Altura de la barra */
+    background-color: #FEFBFC; /* Blanco */
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.navbar-logo img {
+    width: 50px; /* Tamaño del logo */
+    height: auto;
+}
+
+/* Título */
+.navbar-title {
+    font-family: 'Zen Dots', cursive;
+    font-size: 1.8rem; /* Tamaño del título */
+    color: #BF0F01; /* Rojo */
+    margin-left: 20px;
+}
+
+/* Enlaces */
+.navbar-links {
+    display: flex;
+    margin-left: auto;
+    gap: 25px; /* Espacio entre enlaces */
+    margin-right: 20px; /* Margen a la derecha */
+}
+
+.navbar-links a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: #BF0F01; /* Rojo */
+    text-decoration: none;
+    font-size: 1rem; /* Tamaño de los enlaces */
+    transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+    color: #E63946; /* Rojo más claro al hacer hover */
+}
+
+/* Íconos */
+.navbar-icons {
+    display: flex;
+    gap: 20px; /* Espacio entre íconos */
+    align-items: center;
+}
+
+.navbar-icons i {
+    font-size: 2rem; /* Tamaño de los íconos */
+    color: #BF0F01; /* Rojo */
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.navbar-icons i:hover {
+    color: #E63946; /* Rojo más claro al hacer hover */
+}

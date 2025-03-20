@@ -26,11 +26,23 @@
         </div>
         <div class="navbar-icons">
             <i class="bi bi-person-circle"></i>
-            <i class="bi bi-bag-fill"></i>
+            <i class="bi bi-bag-fill" id="cart-icon"></i>
         </div>
     </nav>
 </head>
 <body>
+    <div id="cart-container" class="closed">
+        <div class="cart-header">
+            <h2>Tu pedido</h2>
+            <button id="close-cart">✖</button>
+        </div>
+        <hr>
+        <div id="cart-items"></div>
+        <p id="cart-total">Total: $0.00</p>
+        <button id="checkout-btn">Ordenar Ahora</button>
+    </div>
+    
+    <div id="cart-overlay"></div>
 
     <header class="header-image">
         <img src="imagenes/rest1.jpg" alt="Imagen de cabecera">
@@ -42,64 +54,88 @@
             <img src="imagenes/ramen1.jpg" alt="Tonkotsu Tradicional">
             <h2 class="title">Tonkotsu Tradicional</h2>
             <p class="subtitle">Caldo cremoso de cerdo con chashu, huevo marinado y cebolla de verdeo. Puro sabor japonés.</p>
+            <button class="add-to-cart" data-name="Tonkotsu Tradicional" data-price="10.99">Agregar</button>
+
         </div>
         <div class="grid-item">
             <img src="imagenes/ramen2.jpg" alt="Burrito Bowl">
             <h2 class="title">Shoyu Clásico</h2>
             <p class="subtitle">Sopa ligera de soya con pollo, bambú y nori. Un clásico reconfortante.</p>
+            <button class="add-to-cart" data-name="Shoyu Clásico" data-price="10.99">Agregar</button>
+
         </div>
         <div class="grid-item">
             <img src="imagenes/ramen3.jpg" alt="Lifestyle Bowl">
             <h2 class="title">Spicy Miso Ramen</h2>
             <p class="subtitle">Caldo miso con toque picante, cerdo, maíz dulce y brotes de bambú. Solo para valientes.</p>
+            <button class="add-to-cart" data-name="Spicy Miso Ramen" data-price="10.99">Agregar</button>
+
         </div>
         <div class="grid-item">
             <img src="imagenes/ramen4.avif" alt="Quesadilla">
             <h2 class="title">Ramen de Mariscos</h2>
             <p class="subtitle">Caldo marino con camarones, almejas y toque de limón. Frescura en cada sorbo.</p>
+            <button class="add-to-cart" data-name="Ramen de Mariscos" data-price="10.99">Agregar</button>
+
         </div>
         <div class="grid-item">
             <img src="imagenes/ramen5.webp" alt="Salad">
             <h2 class="title">Vegetariano Especial</h2>
             <p class="subtitle">Sopa vegetal con tofu, shiitake y bok choy. Sano y delicioso. </p>
+            <button class="add-to-cart" data-name="Vegetariano Especial" data-price="10.99">Agregar</button>
+
         </div>
         <div class="grid-item">
             <img src="imagenes/ramen6.webp" alt="Tacos">
             <h2 class="title">Tsukemen</h2>
             <p class="subtitle">Fideos gruesos con caldo intenso para sumergir. Saborea cada bocado.</p>
+            <button class="add-to-cart" data-name="Tsukemen" data-price="10.99">Agregar</button>
+
         </div>
         <div class="grid-item">
             <img src="imagenes/bebida1.png" alt="Quesadilla">
             <h2 class="title">Sake Premium</h2>
             <p class="subtitle">Sake artesanal, suave y afrutado. Perfecto para acompañar tu ramen.</p>
+            <button class="add-to-cart" data-name="Sake Premium" data-price="10.99">Agregar</button>
+
         </div>
         <div class="grid-item">
             <img src="imagenes/bebida2.jpg" alt="Salad">
             <h2 class="title">Matcha Latte</h2>
             <p class="subtitle">Té verde matcha con leche cremosa. Un toque moderno y energético.</p>
+            <button class="add-to-cart" data-name="Matcha Latte" data-price="10.99">Agregar</button>
+
         </div>
         <div class="grid-item">
             <img src="imagenes/ramen6.webp" alt="Tacos">
             <h2 class="title">Ramune Clásico</h2>
             <p class="subtitle">Soda japonesa burbujeante con sabor a limón. ¡Rompe la canica y disfruta!</p>
+            <button class="add-to-cart" data-name="Ramune Clásico" data-price="10.99">Agregar</button>
+
         </div>
         <div class="grid-item">
             <img src="imagenes/ramen4.avif" alt="Quesadilla">
             <h2 class="title">Limonada de Yuzu</h2>
             <p class="subtitle">Refrescante limonada con yuzu japonés. Dulce, cítrica y vibrante.</p>
+            <button class="add-to-cart" data-name="Limonada de Yuzu" data-price="10.99">Agregar</button>
+
         </div>
         <div class="grid-item">
             <img src="imagenes/ramen5.webp" alt="Salad">
             <h2 class="title">Cerveza Japonesa</h2>
             <p class="subtitle">Lager artesanal, ligera y fresca. Ideal para un brindis con ramen.</p>
+            <button class="add-to-cart" data-name="Cerveza Japonesa" data-price="10.99">Agregar</button>
+
         </div>
         <div class="grid-item">
             <img src="imagenes/ramen6.webp" alt="Tacos">
             <h2 class="title">Agua de Cebada</h2>
             <p class="subtitle">Bebida tradicional con sabor tostado. Suave y revitalizante.</p>
+            <button class="add-to-cart" data-name="Agua de Cebada" data-price="10.99">Agregar</button>
+
         </div>
     </section>
 
-    
+    <script src="script.js"></script>
 </body>
 </html>

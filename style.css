@@ -2,8 +2,8 @@
 body {
     margin: 0;
     font-family: 'Noto Sans', sans-serif;
-    background-color: #FEFBFC; /* Blanco */
-    color: #BF0F01; /* Rojo */
+    background-color: #F5F5F5; /* Blanco Arroz */
+    color: #212121; /* Negro Carbón */
 }
 
 /* Barra de navegación */
@@ -11,64 +11,125 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 1495px;
-    height: 80px; /* Altura de la barra */
+    width: 100%;
+    height: 80px;
     background-color: #FEFBFC; /* Blanco */
     display: flex;
     align-items: center;
     padding: 0 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
-/* Logo */
 .navbar-logo img {
-    width: 50px; /* Tamaño del logo */
+    width: 50px;
     height: auto;
 }
 
-/* Título */
 .navbar-title {
     font-family: 'Zen Dots', cursive;
-    font-size: 1.8rem; /* Tamaño del título */
-    color: #BF0F01; /* Rojo */
+    font-size: 1.8rem;
+    color: #E63946; /* Rojo Sakura */
     margin-left: 20px;
 }
 
-/* Enlaces */
 .navbar-links {
     display: flex;
     margin-left: auto;
-    gap: 25px; /* Espacio entre enlaces */
-    margin-right: 20px; /* Margen a la derecha */
+    gap: 25px;
+    margin-right: 20px;
 }
 
 .navbar-links a {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
-    color: #BF0F01; /* Rojo */
+    color: #E63946; /* Rojo Sakura */
     text-decoration: none;
-    font-size: 1rem; /* Tamaño de los enlaces */
+    font-size: 1rem;
     transition: color 0.3s ease;
 }
 
 .navbar-links a:hover {
-    color: #E63946; /* Rojo más claro al hacer hover */
+    color: #F0C808; /* Dorado Sésamo */
 }
 
-/* Íconos */
 .navbar-icons {
     display: flex;
-    gap: 20px; /* Espacio entre íconos */
+    gap: 20px;
     align-items: center;
 }
 
 .navbar-icons i {
-    font-size: 2rem; /* Tamaño de los íconos */
-    color: #BF0F01; /* Rojo */
+    font-size: 2rem;
+    color: #E63946; /* Rojo Sakura */
     cursor: pointer;
     transition: color 0.3s ease;
 }
 
 .navbar-icons i:hover {
-    color: #E63946; /* Rojo más claro al hacer hover */
+    color: #F0C808; /* Dorado Sésamo */
+}
+
+/* Imagen de cabecera */
+.header-image {
+    width: 100%;
+    height: 658px;
+    overflow: hidden;
+    margin-top: 80px;
+}
+
+.header-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Sección de imágenes en bloques */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 40px; /* Aumentamos el espacio entre elementos */
+    padding: 40px; /* Aumentamos el padding para más espacio en los bordes */
+    background-color: #F5F5F5; /* Blanco Arroz */
+    max-width: 1200px; /* Ancho máximo para la cuadrícula */
+    margin: 0 auto; /* Centrar la cuadrícula */
+}
+
+.grid-item {
+    background-color: #FFFFFF; /* Fondo blanco */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px; /* Aumentamos el espacio interno */
+}
+
+.grid-item:hover {
+    transform: translateY(-10px);
+}
+
+.grid-item img {
+    width: 100%;
+    height: 150px; /* Altura de las imágenes */
+    object-fit: cover;
+    border-radius: 10px 10px 0 0; /* Bordes redondeados solo arriba */
+}
+
+.grid-item .title {
+    font-family: 'Zen Dots', cursive;
+    font-size: 1.2rem; /* Tamaño del título */
+    color: #E63946; /* Rojo Sakura */
+    margin: 10px 0 5px;
+}
+
+.grid-item .subtitle {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem; /* Tamaño del subtítulo */
+    color: #212121; /* Negro Carbón */
+    margin: 0 0 10px;
 }

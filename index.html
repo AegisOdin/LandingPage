@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="imagenes/logo.jpg">
 
+    
     <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
@@ -40,12 +41,15 @@
         <div id="cart-empty" class="cart-empty">
             <img src="imagenes/ramen.png" alt="Empty Cart" class="empty-cart-image">
             <p class="empty-cart-text">TU BOLSA ESTÁ VACÍA</p>
-            <p class="empty-cart-subtext">It's lonely in here</p>
-            <button class="order-now-btn">Ordene Ahora</button>
+            <p class="empty-cart-subtext">Esta muy solo por aqui</p>
+            <button class="order-now-btn" id="close-cart">Ordene Ahora</button>
         </div>
         <div id="cart-items"></div>
-        <p id="cart-total">Total: $0.00</p>
-        <button id="checkout-btn">PROCEDER CON EL PAGO</button>
+        <div class="cart-footer">
+            <p id="cart-total">Total: $0.00</p>
+            <button id="checkout-btn">PROCEDER</button>
+        </div>
+        
     </div>
     
     <div id="cart-overlay"></div>
@@ -66,13 +70,12 @@
             <h2 class="title">Tonkotsu Tradicional</h2>
             <p class="subtitle">Caldo cremoso de cerdo con chashu, huevo marinado y cebolla de verdeo. Puro sabor japonés.</p>
             <div class="add-to-cart-container">
-                <img src="imagenes/ramen1.jpg" alt="Tonkotsu Tradicional">
                 <div class="quantity-controls">
                     <button class="decrease-quantity" data-name="Tonkotsu Tradicional">-</button>
                     <span class="quantity" data-name="Tonkotsu Tradicional">1</span>
                     <button class="increase-quantity" data-name="Tonkotsu Tradicional">+</button>
                 </div>
-                <button class="add-to-cart" data-name="Tonkotsu Tradicional" data-price="10.99" id="btn-agregar">Agregar</button>
+                <button class="add-to-cart" data-name="Tonkotsu Tradicional" data-price="10.99" id="btn-agregar" data-source="imagenes/ramen1.jpg">Agregar</button>
             </div>
         </div>
         <div class="grid-item">
@@ -85,7 +88,7 @@
                     <span class="quantity" data-name="Shoyu Clásico">1</span>
                     <button class="increase-quantity" data-name="Shoyu Clásico">+</button>
                 </div>
-                <button class="add-to-cart" data-name="Shoyu Clásico" data-price="10.99" id="btn-agregar">Agregar</button>
+                <button class="add-to-cart" data-name="Shoyu Clásico" data-price="10.99" id="btn-agregar" data-source="imagenes/ramen2.jpg">Agregar</button>
             </div>
 
         </div>
@@ -95,11 +98,11 @@
             <p class="subtitle">Caldo miso con toque picante, cerdo, maíz dulce y brotes de bambú. Solo para valientes.</p>
             <div class="add-to-cart-container">
                 <div class="quantity-controls">
-                    <button class="decrease-quantity" data-name="Tonkotsu Tradicional">-</button>
-                    <span class="quantity" data-name="Tonkotsu Tradicional">1</span>
-                    <button class="increase-quantity" data-name="Tonkotsu Tradicional">+</button>
+                    <button class="decrease-quantity" data-name="Spicy Miso Ramen">-</button>
+                    <span class="quantity" data-name="Spicy Miso Ramen">1</span>
+                    <button class="increase-quantity" data-name="Spicy Miso Ramen">+</button>
                 </div>
-                <button class="add-to-cart" data-name="Tonkotsu Tradicional" data-price="10.99" id="btn-agregar">Agregar</button>
+                <button class="add-to-cart" data-name="Spicy Miso Ramen" data-price="10.99" id="btn-agregar" data-source="imagenes/ramen3.jpg">Agregar</button>
             </div>
 
         </div>
@@ -109,11 +112,11 @@
             <p class="subtitle">Caldo marino con camarones, almejas y toque de limón. Frescura en cada sorbo.</p>
             <div class="add-to-cart-container">
                 <div class="quantity-controls">
-                    <button class="decrease-quantity" data-name="Tonkotsu Tradicional">-</button>
-                    <span class="quantity" data-name="Tonkotsu Tradicional">1</span>
-                    <button class="increase-quantity" data-name="Tonkotsu Tradicional">+</button>
+                    <button class="decrease-quantity" data-name="Ramen de Mariscos">-</button>
+                    <span class="quantity" data-name="Ramen de Mariscos">1</span>
+                    <button class="increase-quantity" data-name="Ramen de Mariscos">+</button>
                 </div>
-                <button class="add-to-cart" data-name="Tonkotsu Tradicional" data-price="10.99" id="btn-agregar">Agregar</button>
+                <button class="add-to-cart" data-name="Ramen de Mariscos" data-price="10.99" id="btn-agregar" data-source="imagenes/ramen4.avif">Agregar</button>
             </div>
 
         </div>
@@ -123,11 +126,11 @@
             <p class="subtitle">Sopa vegetal con tofu, shiitake y bok choy. Sano y delicioso. </p>
             <div class="add-to-cart-container">
                 <div class="quantity-controls">
-                    <button class="decrease-quantity" data-name="Tonkotsu Tradicional">-</button>
-                    <span class="quantity" data-name="Tonkotsu Tradicional">1</span>
-                    <button class="increase-quantity" data-name="Tonkotsu Tradicional">+</button>
+                    <button class="decrease-quantity" data-name="Vegetariano Especial">-</button>
+                    <span class="quantity" data-name="Vegetariano Especial">1</span>
+                    <button class="increase-quantity" data-name="Vegetariano Especial">+</button>
                 </div>
-                <button class="add-to-cart" data-name="Tonkotsu Tradicional" data-price="10.99" id="btn-agregar">Agregar</button>
+                <button class="add-to-cart" data-name="Vegetariano Especial" data-price="10.99" id="btn-agregar" data-source="imagenes/ramen5.webp">Agregar</button>
             </div>
 
         </div>
@@ -137,11 +140,11 @@
             <p class="subtitle">Fideos gruesos con caldo intenso para sumergir. Saborea cada bocado.</p>
             <div class="add-to-cart-container">
                 <div class="quantity-controls">
-                    <button class="decrease-quantity" data-name="Tonkotsu Tradicional">-</button>
-                    <span class="quantity" data-name="Tonkotsu Tradicional">1</span>
-                    <button class="increase-quantity" data-name="Tonkotsu Tradicional">+</button>
+                    <button class="decrease-quantity" data-name="Tsukemen">-</button>
+                    <span class="quantity" data-name="Tsukemen">1</span>
+                    <button class="increase-quantity" data-name="Tsukemen">+</button>
                 </div>
-                <button class="add-to-cart" data-name="Tonkotsu Tradicional" data-price="10.99" id="btn-agregar">Agregar</button>
+                <button class="add-to-cart" data-name="Tsukemen" data-price="10.99" id="btn-agregar" data-source="imagenes/ramen6.webp">Agregar</button>
             </div></div>
         <div class="grid-item">
             <img src="imagenes/bebida1.png" alt="Quesadilla">
@@ -149,11 +152,11 @@
             <p class="subtitle">Sake artesanal, suave y afrutado. Perfecto para acompañar tu ramen.</p>
             <div class="add-to-cart-container">
                 <div class="quantity-controls">
-                    <button class="decrease-quantity" data-name="Tonkotsu Tradicional">-</button>
-                    <span class="quantity" data-name="Tonkotsu Tradicional">1</span>
-                    <button class="increase-quantity" data-name="Tonkotsu Tradicional">+</button>
+                    <button class="decrease-quantity" data-name="Sake Premium">-</button>
+                    <span class="quantity" data-name="Sake Premium">1</span>
+                    <button class="increase-quantity" data-name="Sake Premium">+</button>
                 </div>
-                <button class="add-to-cart" data-name="Tonkotsu Tradicional" data-price="10.99" id="btn-agregar">Agregar</button>
+                <button class="add-to-cart" data-name="Sake Premium" data-price="10.99" id="btn-agregar" data-source="imagenes/bebida1.png">Agregar</button>
             </div>
 
         </div>
@@ -163,11 +166,11 @@
             <p class="subtitle">Té verde matcha con leche cremosa. Un toque moderno y energético.</p>
             <div class="add-to-cart-container">
                 <div class="quantity-controls">
-                    <button class="decrease-quantity" data-name="Tonkotsu Tradicional">-</button>
-                    <span class="quantity" data-name="Tonkotsu Tradicional">1</span>
-                    <button class="increase-quantity" data-name="Tonkotsu Tradicional">+</button>
+                    <button class="decrease-quantity" data-name="Matcha Latte">-</button>
+                    <span class="quantity" data-name="Matcha Latte">1</span>
+                    <button class="increase-quantity" data-name="Matcha Latte">+</button>
                 </div>
-                <button class="add-to-cart" data-name="Tonkotsu Tradicional" data-price="10.99" id="btn-agregar">Agregar</button>
+                <button class="add-to-cart" data-name="Matcha Latte" data-price="10.99" id="btn-agregar" data-source="imagenes/bebida2.jpg">Agregar</button>
             </div>
 
         </div>
@@ -177,11 +180,11 @@
             <p class="subtitle">Soda japonesa burbujeante con sabor a limón. ¡Rompe la canica y disfruta!</p>
             <div class="add-to-cart-container">
                 <div class="quantity-controls">
-                    <button class="decrease-quantity" data-name="Tonkotsu Tradicional">-</button>
-                    <span class="quantity" data-name="Tonkotsu Tradicional">1</span>
-                    <button class="increase-quantity" data-name="Tonkotsu Tradicional">+</button>
+                    <button class="decrease-quantity" data-name="Ramune Clásico">-</button>
+                    <span class="quantity" data-name="Ramune Clásico">1</span>
+                    <button class="increase-quantity" data-name="Ramune Clásico">+</button>
                 </div>
-                <button class="add-to-cart" data-name="Tonkotsu Tradicional" data-price="10.99" id="btn-agregar">Agregar</button>
+                <button class="add-to-cart" data-name="Ramune Clásico" data-price="10.99" id="btn-agregar" data-source="imagenes/bebida3.jpg">Agregar</button>
             </div>
 
         </div>
@@ -191,11 +194,11 @@
             <p class="subtitle">Refrescante limonada con yuzu japonés. Dulce, cítrica y vibrante.</p>
             <div class="add-to-cart-container">
                 <div class="quantity-controls">
-                    <button class="decrease-quantity" data-name="Tonkotsu Tradicional">-</button>
-                    <span class="quantity" data-name="Tonkotsu Tradicional">1</span>
-                    <button class="increase-quantity" data-name="Tonkotsu Tradicional">+</button>
+                    <button class="decrease-quantity" data-name="Limonada de Yuzu">-</button>
+                    <span class="quantity" data-name="Limonada de Yuzu">1</span>
+                    <button class="increase-quantity" data-name="Limonada de Yuzu">+</button>
                 </div>
-                <button class="add-to-cart" data-name="Tonkotsu Tradicional" data-price="10.99" id="btn-agregar">Agregar</button>
+                <button class="add-to-cart" data-name="Limonada de Yuzu" data-price="10.99" id="btn-agregar" data-source="imagenes/bebida4.avif">Agregar</button>
             </div>
 
         </div>
@@ -205,11 +208,11 @@
             <p class="subtitle">Lager artesanal, ligera y fresca. Ideal para un brindis con ramen.</p>
             <div class="add-to-cart-container">
                 <div class="quantity-controls">
-                    <button class="decrease-quantity" data-name="Tonkotsu Tradicional">-</button>
-                    <span class="quantity" data-name="Tonkotsu Tradicional">1</span>
-                    <button class="increase-quantity" data-name="Tonkotsu Tradicional">+</button>
+                    <button class="decrease-quantity" data-name="Cerveza Japonesa">-</button>
+                    <span class="quantity" data-name="Cerveza Japonesa">1</span>
+                    <button class="increase-quantity" data-name="Cerveza Japonesa">+</button>
                 </div>
-                <button class="add-to-cart" data-name="Tonkotsu Tradicional" data-price="10.99" id="btn-agregar">Agregar</button>
+                <button class="add-to-cart" data-name="Cerveza Japonesa" data-price="10.99" id="btn-agregar" data-source="imagenes/bebida5.jpg">Agregar</button>
             </div>
 
         </div>
@@ -219,11 +222,11 @@
             <p class="subtitle">Bebida tradicional con sabor tostado. Suave y revitalizante.</p>
             <div class="add-to-cart-container">
                 <div class="quantity-controls">
-                    <button class="decrease-quantity" data-name="Tonkotsu Tradicional">-</button>
-                    <span class="quantity" data-name="Tonkotsu Tradicional">1</span>
-                    <button class="increase-quantity" data-name="Tonkotsu Tradicional">+</button>
+                    <button class="decrease-quantity" data-name="Agua de Cebada">-</button>
+                    <span class="quantity" data-name="Agua de Cebada">1</span>
+                    <button class="increase-quantity" data-name="Agua de Cebada">+</button>
                 </div>
-                <button class="add-to-cart" data-name="Tonkotsu Tradicional" data-price="10.99" id="btn-agregar">Agregar</button>
+                <button class="add-to-cart" data-name="Agua de Cebada" data-price="10.99" id="btn-agregar" data-source="imagenes/bebida6.jpg">Agregar</button>
             </div>
 
         </div>

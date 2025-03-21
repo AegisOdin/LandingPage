@@ -34,7 +34,7 @@ body {
 
 .cart-header button{
     
-        background-color: #4D1F0B; /* Color marrón oscuro */
+        background-color: #212121; /* Color marrón oscuro */
         color: white; /* Texto en color blanco */
         font-weight: bold; /* Texto en negrita */
         text-transform: uppercase; /* Convertir texto a mayúsculas */
@@ -47,24 +47,27 @@ body {
 }
 
 .cart-header button:hover{
-    background-color: #3A1808; /* Un tono más oscuro al pasar el mouse */
+    color: #ffd500;
+    scale: 1.05;
+    transition: calc(0.3s * 1.1);
 }
 
 #checkout-btn {
-    background-color: #4D1F0B; /* Color marrón oscuro */
+    background-color: #E63946; /* Color marrón oscuro */
     color: white; /* Texto en color blanco */
     font-weight: bold; /* Texto en negrita */
     text-transform: uppercase; /* Convertir texto a mayúsculas */
     font-size: 16px; /* Tamaño de fuente */
-    padding: 8px 15px; /* Espaciado interno */
+    padding: 16px 20px; /* Espaciado interno */
     border: none; /* Sin bordes */
     border-radius: 6px; /* Bordes redondeados */
     cursor: pointer; /* Cambia el cursor a una mano al pasar */
     transition: background 0.3s ease-in-out; /* Animación suave */
+    margin-right: 20px;
 }
 
 .cart-item button{
-    background-color: #4D1F0B; /* Color marrón oscuro */
+    background-color: #E63946; /* Color marrón oscuro */
     color: white; /* Texto en color blanco */
     font-weight: bold; /* Texto en negrita */
     text-transform: uppercase; /* Convertir texto a mayúsculas */
@@ -77,7 +80,9 @@ body {
 }
 
 #checkout-btn:hover{
-    background-color: #3A1808; /* Un tono más oscuro al pasar el mouse */
+    background-color: #C62828; /* Un tono más oscuro al pasar el mouse */
+    scale: 1.05;
+    transition: calc(0.3s * 1.1);
 }
 
 .navbar-links {
@@ -153,6 +158,7 @@ body {
     max-width: 1200px; /* Ancho máximo para la cuadrícula */
     margin: 0 auto; /* Centrar la cuadrícula */
 }
+
 
 #btn-agregar{
     background-color: #E63946; /* Color marrón oscuro */
@@ -371,8 +377,9 @@ body {
     border-radius: 5px;
 }
 
+
 .cart-quantity-controls button:hover {
-    background-color: #e68900;
+    color: #ff9800;
 }
 
 .cart-quantity {
@@ -380,9 +387,11 @@ body {
     font-weight: bold;
 }
 
+
+
 /* Estilos para los botones del carrito */
-.cart-quantity-controls button, .remove-item {
-    background-color: #007bff; /* Azul */
+.cart-quantity-controls button {
+    background-color: #212121; /* Azul */
     color: white; /* Texto en blanco */
     border: none;
     padding: 8px 12px;
@@ -396,7 +405,7 @@ body {
 }
 
 .remove-item {
-    background-color: #007bff; /* Azul */
+    background-color: #ffffff; /* Azul */
     color: white; /* Texto en blanco */
     border: none;
     padding: 8px 12px;
@@ -409,8 +418,9 @@ body {
     font-family: 'Roboto Medium', sans-serif; /* Fuente Noto Sans Regular */
 }
 
-.cart-quantity-controls button:hover, .remove-item:hover {
-    background-color: #0056b3; /* Azul oscuro al hacer hover */
+
+.cart-quantity-controls button:hover {
+    color: #F0C808;
 }
 
 /* Ajustes generales para el carrito */
@@ -422,6 +432,9 @@ body {
     font-size: 16px;
     margin-bottom: 15px;
     align-items: center;
+}
+
+.cart-container{
 }
 
 /* Estilo para el nombre y precio del item */
@@ -437,10 +450,12 @@ body {
 
 /* Imagen debajo del item name */
 .imagen-bloque img {
-    width: 300px;
-    height: 150px;
+    width: 100%;
+    height: auto;
     display: block;
     margin-top: 5px;
+    border: #212121;
+    border-radius: 10px;
 }
 
 /* Controles de cantidad alineados al centro */
@@ -466,6 +481,13 @@ body {
     grid-column: 2 / 3; /* Ocupa la segunda columna */
     justify-self: end;
     margin: 10px 0 0;
+}
+
+.total-amount {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 20px;
+    justify-self: end;
 }
 
 /* Separador */
@@ -537,7 +559,7 @@ hr {
 
 /* Estilos para el footer */
 .footer {
-    background-color: #000000; /* Fondo negro */
+    background-color: #212121; /* Fondo negro */
     color: #FFFFFF; /* Texto blanco */
     padding: 40px 20px;
     font-family: 'Noto Sans', sans-serif;
@@ -594,4 +616,10 @@ hr {
 
 .social-icon:hover {
     color: #E63946; /* Rojo Sakura al hacer hover */
+}
+
+.cart-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

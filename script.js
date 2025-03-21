@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let cart = [];
 
-    // Abrir y cerrar el carrito
     cartIcon.addEventListener("click", () => {
         cartContainer.classList.toggle("open");
         updateCartVisibility();
@@ -22,7 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
         cartContainer.classList.remove("open");
     });
 
-    // Agregar items al carrito
     addToCartButtons.forEach(button => {
         button.addEventListener("click", () => {
             const name = button.getAttribute("data-name");
@@ -53,7 +51,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Disminuir cantidad en la tienda
     decreaseQuantityButtons.forEach(button => {
         button.addEventListener("click", () => {
             const name = button.getAttribute("data-name");
@@ -103,8 +100,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     
 
-    // Eliminar elementos del carrito
-    // Asignar eventos a los botones dentro del carrito
     function attachCartEvents() {
         document.querySelectorAll(".cart-increase").forEach(button => {
             button.addEventListener("click", () => {
@@ -137,7 +132,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Actualizar la visibilidad del carrito vacío
     function updateCartVisibility() {
         if (cart.length === 0) {
             cartEmpty.style.display = "block";
@@ -153,7 +147,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // Negrear el fondo
     const cartOverlay = document.getElementById("cart-overlay");
     cartIcon.addEventListener("click", () => {
         cartContainer.classList.add("open");

@@ -88,8 +88,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Actualizar el carrito
+    /* 
+    <p>${item.name} - $${item.price.toFixed(2)}</p>
+    */
       // Actualizar el carrito
-      function updateCart() {
+    function updateCart() {
         cartItemsContainer.innerHTML = "";
         let total = 0;
 
@@ -97,7 +100,11 @@ document.addEventListener("DOMContentLoaded", () => {
             const cartItem = document.createElement("div");
             cartItem.classList.add("cart-item");
             cartItem.innerHTML = `
-                <p>${item.name} - $${item.price.toFixed(2)}</p>
+                <p>${item.name}</p>
+                <p>$${item.price.toFixed(2)}</p>
+                <div class="imagen-bloque">
+                    <img src="imagen/bebida1.png">
+                </div>
                 <div class="cart-quantity-controls">
                     <button class="cart-decrease" data-name="${item.name}">-</button>
                     <span class="cart-quantity" data-name="${item.name}">${item.quantity}</span>
